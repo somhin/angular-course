@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>TODO LIST</h1>
+  <app-task-item
+    *ngFor="let task of tasks"
+    [task]="task"
+    (OnRemove)="removeTask($event)"
+  ></app-task-item>
+  <div id="selectedTask">
+    <!-- todo... -->
+  </div>
+  <div id="add">
+    Add task:
+    <input type="text" [(ngModel)]="addTaskValue" placeholder="task's title" />
+    <input type="text" [(ngModel)]="addDesc" placeholder="description" />
+    <button id="addBtn" (click)="addTask()">add</button>
+  </div>
+</div>
