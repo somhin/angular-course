@@ -1,9 +1,14 @@
+<div id="nav">
+  <ul>
+    <li><a [routerLink]="['/']" routerLinkActive="active">Increment</a></li>
+    <li><a [routerLink]="'/lab4'">lab ng-for odd-even</a></li>
+    <li><a [routerLink]="['/home']">component diagram</a></li>
+    <li><a [routerLink]="['/todo']">Basic tasks</a></li>
+    <li><a [routerLink]="['/swiftviews']">SwiftViews copy</a></li>
+    <li><a [routerLink]="['/page']">Products</a></li>
+    <li><a [routerLink]="['/todo2']">Improved tasks</a></li>
+  </ul>
+</div>
 <div>
-  <app-todo></app-todo>
-  <app-page></app-page>
-  <app-swiftviews></app-swiftviews>
-  <app-todo-list></app-todo-list>
-  <app-home></app-home>
-  <app-lab4></app-lab4>
-  <app-counting></app-counting>
+  <router-outlet></router-outlet>
 </div>

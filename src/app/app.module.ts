@@ -18,6 +18,39 @@ import { TodoComponent } from './todo/todo.component';
 import { TaskItemComponent } from './todo/task-item/task-item.component';
 import { BackendService } from './backend.service';
 import { CatalogModule } from './modules/catalog/catalog.module';
+import { RouterModule, Routes } from '@angular/router';
+import { PageComponent } from './page/page.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: CountingComponent,
+  },
+  {
+    path: 'lab4',
+    component: Lab4Component,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'todo',
+    component: TodoListComponent,
+  },
+  {
+    path: 'swiftviews',
+    component: SwiftviewsComponent,
+  },
+  {
+    path: 'page',
+    component: PageComponent,
+  },
+  {
+    path: 'todo2',
+    component: TodoComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -36,7 +69,13 @@ import { CatalogModule } from './modules/catalog/catalog.module';
     TodoComponent,
     TaskItemComponent,
   ],
-  imports: [BrowserModule, FormsModule, CatalogModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    CatalogModule,
+    RouterModule.forRoot(routes),
+  ],
+  exports: [RouterModule],
   providers: [BackendService],
   bootstrap: [AppComponent],
 })

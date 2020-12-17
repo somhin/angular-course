@@ -1,0 +1,13 @@
+div#nav {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 10px;
+    background-color: black;
+
+    a {
+      color: whitesmoke;
+    }
+  }
+}

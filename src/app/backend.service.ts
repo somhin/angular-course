@@ -1,4 +1,4 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Product } from '../app/page/classes/product';
 
 @Injectable({
@@ -20,9 +20,5 @@ export class BackendService {
     p2.price = 60;
 
     return [p1, p2];
-  }
-
-  getProductById(productId: number): Product {
-    return;
   }
 }
